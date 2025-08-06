@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer Dashboard - Smart Farm System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Farm System</h1>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="history.html">Reports / History</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Farmer Dashboard / Advisory Interface</h2>
+  <label>Soil Moisture (%)</label>
+  <input type="number" id="moisture" placeholder="Enter soil moisture">
+
+  <label>Temperature (°C)</label>
+  <input type="number" id="temperature" placeholder="Enter temperature">
+
+  <label>Rainfall (mm) (Optional)</label>
+  <input type="number" id="rainfall" placeholder="Enter rainfall">
+
+  <label>Crop Type</label>
+  <select id="crop">
+    <option>Maize</option>
+    <option>Beans</option>
+    <option>Rice</option>
+    <option>Other</option>
+  </select>
+
+  <button class="button" onclick="generateRecommendation()">Get Recommendation</button>
+
+  <div id="recommendation" class="recommendation"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

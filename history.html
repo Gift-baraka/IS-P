@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports / History - Smart Farm System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Farm System</h1>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="history.html">Reports / History</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Reports / History Interface</h2>
+
+  <label>Filter by Crop</label>
+  <select id="filterCrop">
+    <option value="">All</option>
+    <option>Maize</option>
+    <option>Beans</option>
+    <option>Rice</option>
+  </select>
+
+  <label>Filter by Date Range</label>
+  <input type="date" id="startDate"> to <input type="date" id="endDate">
+
+  <button class="button" onclick="filterHistory()">Apply Filter</button>
+  <button class="button" onclick="resetHistory()">Reset</button>
+
+  <table id="historyTable">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Crop</th>
+        <th>Moisture (%)</th>
+        <th>Temp (°C)</th>
+        <th>Recommendation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>2025-02-12</td>
+        <td>Maize</td>
+        <td>40</td>
+        <td>30</td>
+        <td>Irrigate</td>
+      </tr>
+      <tr>
+        <td>2025-02-10</td>
+        <td>Beans</td>
+        <td>60</td>
+        <td>27</td>
+        <td>No irrigation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
